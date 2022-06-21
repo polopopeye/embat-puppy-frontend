@@ -16,3 +16,11 @@ npm install
 npm run dev
 
 ```
+
+To deploy:
+
+```
+// Create a build statics files
+npm run build
+// firebase deploy --only hosting
+```
