@@ -7,7 +7,7 @@ const Badges = (props: { badges: Array<string> }) => {
       <div>
         {badges?.map((badge) => {
           return (
-            <div>
+            <div key={badge}>
               <span className="inline-flex items-center px-2.5 py-0.5 rounded-md  font-medium bg-blue-100 text-gray-800 m-1">
                 {badge}
               </span>
