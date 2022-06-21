@@ -7,7 +7,7 @@ type LayoutProps = {
   title?: string;
 };
 
-const Layout: React.FC = ({ children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <div className="w-full p-2">
