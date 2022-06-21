@@ -6,6 +6,8 @@ export type PuppyInterface = {
   profileImage: string;
   skills: Array<string>;
 
+  heart?: boolean;
+
   createdAt?: Date;
   updatedAt?: Date;
 };

@@ -20,10 +20,6 @@ const initialState: PuppyState = {
 
 export const listPuppies = createAsyncThunk('puppy', async () => {
   const response = await axios.get(constants.api.puppy);
-  console.log(
-    '🚀 ~ file: puppySlice.ts ~ line 23 ~ listPuppies ~ response',
-    response
-  );
 
   return response.data;
 });
@@ -31,7 +27,15 @@ export const listPuppies = createAsyncThunk('puppy', async () => {
 export const puppySlice = createSlice({
   name: 'puppy',
   initialState,
-  reducers: {},
+  reducers: {
+    saveHeart: (state, action) => {
+      const puppy = state.data.find((puppy) => puppy?.id === action.payload);
+
+      if (puppy) {
+        puppy.heart = puppy.heart ? false : true;
+      }
+    },
+  },
   extraReducers: (builder: any) => {
     builder
       .addCase(listPuppies.pending, (state: PuppyState) => {
