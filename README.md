@@ -24,3 +24,7 @@ To deploy:
 npm run build
 // firebase deploy --only hosting
 ```
+
+# env variables
+
+is not necesary to config env variables. only one is needed the API URL. And can be found on ./next.config.js
