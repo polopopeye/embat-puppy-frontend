@@ -21,7 +21,7 @@ const ListPuppies = () => {
     store.dispatch(puppySlice.actions.saveHeart(puppyID));
   };
 
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
   let [currentPupy, setCurrentPupy] = useState({} as PuppyInterface);
 
   return (
